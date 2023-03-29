@@ -26,23 +26,23 @@ int main()
 			nComBingo = CheckBingo(nComTable);
 
 			HideTable(nComTable);
-			cout << "ÄÄÇ»ÅÍ ºù°í:" << nComBingo << endl << endl;
+			cout << "ì»´í“¨í„° ë¹™ê³ :" << nComBingo << endl << endl;
 			ShowTable(nUserTable);
-			cout << "À¯Àú ºù°í :" << nUserBingo << endl << endl;
+			cout << "ìœ ì € ë¹™ê³  :" << nUserBingo << endl << endl;
 
 			if (nUserBingo >= 3 && nComBingo >= 3)
 			{
-				cout << " ºù°í µ¿½Ã ´Þ¼º _ ºñ°å´Ù " << endl;
+				cout << " ë¹™ê³  ë™ì‹œ ë‹¬ì„± _ ë¹„ê²¼ë‹¤ " << endl;
 				break;
 			}
 			else if (nUserBingo >= 3)
 			{
-				cout << "À¯Àú ºù°í ´Þ¼º _ ÀÌ°å´Ù" << endl;
+				cout << "ìœ ì € ë¹™ê³  ë‹¬ì„± _ ì´ê²¼ë‹¤" << endl;
 				break;
 			}
 			else if (nComBingo >= 3)
 			{
-				cout << "ÄÄÇ»ÅÍ ºù°í ´Þ¼º _ Á³´Ù" << endl;
+				cout << "ì»´í“¨í„° ë¹™ê³  ë‹¬ì„± _ ì¡Œë‹¤" << endl;
 				break;
 			}
 
@@ -57,7 +57,7 @@ int main()
 				isMyTurn = true;
 			}
 		}
-		cout << "0.°ÔÀÓÁ¾·á 1.»õ °ÔÀÓ";
+		cout << "0.ê²Œìž„ì¢…ë£Œ 1.ìƒˆ ê²Œìž„";
 		cin >> isPlaying;
 	}
 	return 0;
