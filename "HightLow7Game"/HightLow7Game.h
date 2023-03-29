@@ -25,16 +25,16 @@ void InitCards(tagCard* cards)
 			switch (i)
 			{
 			case E_SPADE:
-				cards[i * 13 + j].szShape = (char*)"¢¼";	//	¢¾ ¢¼ ¢À ¡ß
+				cards[i * 13 + j].szShape = (char*)"â™ ";	//	â™¥ â™  â™£ â—†
 				break;
 			case E_DIA:
-				cards[i * 13 + j].szShape = (char*)"¡ß";	
+				cards[i * 13 + j].szShape = (char*)"â—†";	
 				break;
 			case E_HEART:
-				cards[i * 13 + j].szShape = (char*)"¢¾";		
+				cards[i * 13 + j].szShape = (char*)"â™¥";		
 				break;
 			case E_CLOVER:
-				cards[i * 13 + j].szShape = (char*)"¢À";	
+				cards[i * 13 + j].szShape = (char*)"â™£";	
 				break;
 
 			}
@@ -96,7 +96,7 @@ int Betting(int money)
 	int nBet = 0;
 	while (nBet < 100 || nBet >money)
 	{
-		cout << "±Ý¾×À» º£ÆÃÇÏ½Ã¿À(100~º¸À¯±Ý¾×) : ";
+		cout << "ê¸ˆì•¡ì„ ë² íŒ…í•˜ì‹œì˜¤(100~ë³´ìœ ê¸ˆì•¡) : ";
 		cin >> nBet;
 
 	}
@@ -110,8 +110,8 @@ void Play(tagCard* cards, int* money, int* index, bool* playing)
 	E_SELECT eSelect;
 	int nBet;
 
-	cout << "ÇöÀç ±Ý¾× : " << *money << endl;
-	cout << "1.ÇÏÀÌ 2.·Î¿ì 3.¼¼ºì (0.Á¾·á) : ";
+	cout << "í˜„ìž¬ ê¸ˆì•¡ : " << *money << endl;
+	cout << "1.í•˜ì´ 2.ë¡œìš° 3.ì„¸ë¸ (0.ì¢…ë£Œ) : ";
 	cin >> nSelect;
 
 	eSelect = (E_SELECT)nSelect;
@@ -119,19 +119,19 @@ void Play(tagCard* cards, int* money, int* index, bool* playing)
 	switch (eSelect)
 	{
 		case E_QUIT:
-			cout << "°ÔÀÓÀ» Á¾·á ÇÕ´Ï´Ù. " << endl;
+			cout << "ê²Œìž„ì„ ì¢…ë£Œ í•©ë‹ˆë‹¤. " << endl;
 			*playing = false;
 			break;
 		case E_HIGH:
 			nBet = Betting(*money);
 			if (cards[*index].nNumber > 7)
 			{
-				cout << "º£ÆÃ ¼º°ø! : ";
+				cout << "ë² íŒ… ì„±ê³µ! : ";
 				*money += nBet;
 			}
 			else
 			{
-				cout << "º£ÆÃ ½ÇÆÐ! : ";
+				cout << "ë² íŒ… ì‹¤íŒ¨! : ";
 				*money -= nBet;
 			}
 			cout << cards[*index].szShape << cards[*index].nNumber << endl;
@@ -140,13 +140,13 @@ void Play(tagCard* cards, int* money, int* index, bool* playing)
 			nBet = Betting(*money);
 			if (cards[*index].nNumber < 7)
 			{
-				cout << "º£ÆÃ ¼º°ø! : ";
+				cout << "ë² íŒ… ì„±ê³µ! : ";
 				*money += nBet;
 
 			}
 			else
 			{
-				cout << "º£ÆÃ ½ÇÆÐ! : ";
+				cout << "ë² íŒ… ì‹¤íŒ¨! : ";
 				*money -= nBet;
 			}
 			cout << cards[*index].szShape << cards[*index].nNumber << endl;
@@ -155,13 +155,13 @@ void Play(tagCard* cards, int* money, int* index, bool* playing)
 			nBet = Betting(*money);
 			if (cards[*index].nNumber == 7)
 			{
-				cout << "º£ÆÃ ¼º°ø! : ";
+				cout << "ë² íŒ… ì„±ê³µ! : ";
 				*money += nBet*2;
 
 			}
 			else
 			{
-				cout << "º£ÆÃ ½ÇÆÐ! : ";
+				cout << "ë² íŒ… ì‹¤íŒ¨! : ";
 				*money -= nBet;
 			}
 			cout << cards[*index].szShape << cards[*index].nNumber << endl;
