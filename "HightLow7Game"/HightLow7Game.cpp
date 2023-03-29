@@ -21,14 +21,14 @@ int main()
 		Print(stCards, nCurrIndex);
 		if (nMyMoney < 100)
 		{
-			cout << "°ÅÁö°¡ µÇ¾ú½À´Ï´Ù. °ÔÀÓÀå¿¡¼­ ³ª°©´Ï´Ù." << endl;
+			cout << "ê±°ì§€ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤. ê²Œìž„ìž¥ì—ì„œ ë‚˜ê°‘ë‹ˆë‹¤." << endl;
 			isPlaying = false;
 		}
 		else if (nCurrIndex > 42)
 		{
 			Suffle(stCards);
 			nCurrIndex = 5;
-			cout << "»õ Ä«µå·Î °ÔÀÓÀ» °è¼Ó ÇÕ´Ï´Ù." << endl;
+			cout << "ìƒˆ ì¹´ë“œë¡œ ê²Œìž„ì„ ê³„ì† í•©ë‹ˆë‹¤." << endl;
 			system("pause");
 		}
 		else
