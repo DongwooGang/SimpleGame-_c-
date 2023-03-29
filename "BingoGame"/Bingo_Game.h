@@ -59,7 +59,7 @@ void HideTable(int* table)
 void UserSelect(int* userTable, int* comTable)
 {
 	int nSelect;
-	cout << "¼±ÅÃ(1~25) : ";
+	cout << "ì„ íƒ(1~25) : ";
 	cin >> nSelect;
 
 	for (int i = 0; i < 25; i++)
@@ -79,7 +79,7 @@ void UserSelect(int* userTable, int* comTable)
 		}
 		if (i == 24)
 		{
-			cout << "Á¦´ë·Î ¼±ÅÃÇÏ¼¼¿ä." << endl;
+			cout << "ì œëŒ€ë¡œ ì„ íƒí•˜ì„¸ìš”." << endl;
 			Sleep(1000);
 		}
 	}
@@ -90,7 +90,7 @@ void ComSelect(int* userTable, int* comTable)
 	int nIndex = 0;
 	int nSelect;
 
-	cout << "ÄÄÇ»ÅÍ ¼±ÅÃ Áß";
+	cout << "ì»´í“¨í„° ì„ íƒ ì¤‘";
 	Sleep(500);
 	cout << ".";
 	Sleep(500);
@@ -117,7 +117,7 @@ void ComSelect(int* userTable, int* comTable)
 			break;
 		}
 	}
-	cout << "ÄÄÇ»ÅÍ ¼±ÅÃ : " << nSelect << endl;
+	cout << "ì»´í“¨í„° ì„ íƒ : " << nSelect << endl;
 	Sleep(500);
 }
 
