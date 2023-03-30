@@ -33,7 +33,7 @@ int main()
 
 			if (isPlaying == false)
 			{
-				cout << " °ÔÀÓ Å¬¸®¾î _°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù." << endl;
+				cout << " ê²Œìž„ í´ë¦¬ì–´ _ê²Œìž„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤." << endl;
 				system("pause");
 			}
 			while (_kbhit()) _getch();
