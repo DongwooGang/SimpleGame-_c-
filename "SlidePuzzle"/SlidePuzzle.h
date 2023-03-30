@@ -80,7 +80,7 @@ void Print(HANDLE hOP, int puzzle[5][5], int x, int y)
 		{
 			char* szTemp = new char;
 			if (j == x && i == y)
-				DrawBlock(hOP, 10 + j * 6, 5 + i * 3, (char*)"กแ", BG_WHITE | FG_BLACK);
+				DrawBlock(hOP, 10 + j * 6, 5 + i * 3, (char*)"ยกรก", BG_WHITE | FG_BLACK);
 			else
 				DrawBlock(hOP, 10 + j * 6, 5 + i * 3, itoa(puzzle[i][j], szTemp, 10), BG_WHITE | FG_BLACK);
 		}
@@ -90,9 +90,9 @@ void Print(HANDLE hOP, int puzzle[5][5], int x, int y)
 void DrawBlock(HANDLE hOP, int x, int y, char* str, WORD color)
 {
 	Draw(hOP, x + 0, y + 0, str, color);
-	Draw(hOP, x + 2, y + 0, (char*)"กแ", color);
-	Draw(hOP, x + 0, y + 1, (char*)"กแ", color);
-	Draw(hOP, x + 2, y + 1, (char*)"กแ", color);
+	Draw(hOP, x + 2, y + 0, (char*)"ยกรก", color);
+	Draw(hOP, x + 0, y + 1, (char*)"ยกรก", color);
+	Draw(hOP, x + 2, y + 1, (char*)"ยกรก", color);
 }
 void Swap(int* prevBlock, int* currBlock)
 {
